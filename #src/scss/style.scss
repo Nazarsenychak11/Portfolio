@@ -1,0 +1,146 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+@import 'fonts';
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+	&::before {
+		padding: 0;
+		margin: 0;
+		border: 0;
+		box-sizing: border-box;
+	}
+	&::after {
+		padding: 0;
+		margin: 0;
+		border: 0;
+		box-sizing: border-box;
+	}
+}
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	font-family: Lato;
+}
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+
+	.page {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+
+		.parallax {
+			position: relative;
+			height: 100%;
+
+			&__mountain {
+				position: fixed;
+				height: 100%;
+				width: 100%;
+				top: 0;
+				left: 0;
+			}
+
+			&_mountain_1 {
+				background-image: url(../img/m_1.png);
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			&_mountain_2 {
+				background-image: url(../img/m_2.png);
+				background-repeat: no-repeat;
+				background-size: 45%;
+				background-position: bottom right;
+				z-index: 1;
+			}
+			&_mountain_3 {
+				background-image: url(../img/m_3.png);
+				background-repeat: no-repeat;
+				background-size: 100%;
+				background-position: left bottom;
+				z-index: 1;
+			}
+			&__fog {
+				background: url(../img/fog_1.png);
+				background-repeat: no-repeat !important;
+				background-size: 100% !important;
+				background-position: bottom !important;
+				position: fixed;
+				height: 100%;
+				width: 100%;
+				top: 0;
+				left: 0;
+				z-index: 2;
+			}
+			
+		}
+	}
+}
+
+
+.content {
+	position: relative;
+
+	&__body {
+		max-width: 1170px;
+		margin: 0 auto;
+
+		.content__header {
+			text-align: center;
+			text-transform: uppercase;
+			margin-bottom: 20px;
+			padding: 0 20px;
+
+			.content_title {
+				font-size: 150px;
+			}
+			.content_subtitle {
+				font-size: 80px;
+			}
+		}
+	}
+
+	&__article {
+		background-color: rgba(255, 255, 255, 0.5);
+		padding: 25px;
+		font-size: 18px;
+		line-height: 24px;
+		p {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+
+
+
+section {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+.portfolio {
+	width: 25%;
+	min-height: 150px;
+	background-color: rosybrown;
+	margin: 3px;
+}
+
