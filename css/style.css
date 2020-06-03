@@ -1,0 +1,186 @@
+@font-face {
+  font-family: "Lato";
+  font-display: swap;
+  src: url("../fonts/Lato-Bold.woff") format("woff"), url("../fonts/Lato-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BebasNeue";
+  font-display: swap;
+  src: url("../fonts/BebasNeue.woff") format("woff"), url("../fonts/BebasNeue.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-display: swap;
+  src: url("../fonts/Lato-Regular.woff") format("woff"), url("../fonts/Lato-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFUIDisplay-Regular";
+  font-display: swap;
+  src: url("../fonts/SFUIDisplay-Regular.woff") format("woff"), url("../fonts/SFUIDisplay-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*::before {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: Lato;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.wrapper .page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.wrapper .page .parallax {
+  position: relative;
+  height: 100%;
+}
+
+.wrapper .page .parallax__mountain {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.wrapper .page .parallax_mountain_1 {
+  background-image: url(../img/m_1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper .page .parallax_mountain_2 {
+  background-image: url(../img/m_2.png);
+  background-repeat: no-repeat;
+  background-size: 45%;
+  background-position: bottom right;
+  z-index: 1;
+}
+
+.wrapper .page .parallax_mountain_3 {
+  background-image: url(../img/m_3.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: left bottom;
+  z-index: 1;
+}
+
+.wrapper .page .parallax__fog {
+  background: url(../img/fog_1.png);
+  background-repeat: no-repeat !important;
+  background-size: 100% !important;
+  background-position: bottom !important;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.content {
+  position: relative;
+}
+
+.content__body {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.content__body .content__header {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.content__body .content__header .content_title {
+  font-size: 150px;
+}
+
+.content__body .content__header .content_subtitle {
+  font-size: 80px;
+}
+
+.content__article {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 25px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.content__article p {
+  margin-bottom: 20px;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.portfolio {
+  width: 25%;
+  min-height: 150px;
+  background-color: rosybrown;
+  margin: 3px;
+}
+
+.webp .wrapper .page .parallax_mountain_1 { background-image: url(../img/m_1.webp); }
+
+.webp .wrapper .page .parallax_mountain_2 { background-image: url(../img/m_2.webp); }
+
+.webp .wrapper .page .parallax_mountain_3 { background-image: url(../img/m_3.webp); }
+
+.webp .wrapper .page .parallax__fog { background: url(../img/fog_1.webp); }
