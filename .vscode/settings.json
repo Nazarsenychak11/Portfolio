@@ -1,5 +1,6 @@
 {
     "editor.smoothScrolling": true,
     "editor.mouseWheelScrollSensitivity": 2,
-    "editor.scrollBeyondLastLine": false
+    "editor.scrollBeyondLastLine": false,
+    "liveServer.settings.port": 5501
 }

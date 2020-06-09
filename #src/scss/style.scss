@@ -90,11 +90,9 @@ body {
 				left: 0;
 				z-index: 2;
 			}
-			
 		}
 	}
 }
-
 
 .content {
 	position: relative;
@@ -129,9 +127,6 @@ body {
 	}
 }
 
-
-
-
 section {
 	display: flex;
 	justify-content: center;
@@ -144,3 +139,41 @@ section {
 	margin: 3px;
 }
 
+#scroll {
+	position: absolute;
+	top: 80%;
+	right: 10%;
+	z-index: 20;
+}
+
+.box {
+	span {
+		width: 30px;
+		height: 30px;
+		display: block;
+		border-right: 2px solid #fff;
+		border-bottom: 2px solid #fff;
+		transform: rotate(45deg);
+		margin: -10px;
+		animation: animate 2s infinite;
+		&:nth-child(2) {
+			animation-delay: -0.2s;
+		}
+		&:nth-child(3) {
+			animation-delay: -0.4s;
+		}
+	}
+}
+
+@keyframes animate {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+		transform: rotate(45deg) translate(10px, 10px);
+	}
+	100% {
+		opacity: 0;
+	}
+}
